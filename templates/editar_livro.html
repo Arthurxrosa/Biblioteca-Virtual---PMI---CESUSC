@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Livro</title>
+</head>
+<body>
+    <h1>Editar Livro</h1>
+    <form method="POST" action="{{ url_for('editar_livro', estante_id=estante_id, livro_id=livro['id']) }}">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{{ livro['titulo'] }}"><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" value="{{ livro['autor'] }}"><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
+
+
+
