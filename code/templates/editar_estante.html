@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Estante</title>
+</head>
+<body>
+    <h1>Editar Estante</h1>
+    <form method="POST" action="{{ url_for('editar_estante', estante_id=estante[0]) }}">
+        <label for="nome_estante">Nome da Estante:</label>
+        <input type="text" id="nome_estante" name="nome_estante" value="{{ estante[2] }}" required><br>
+        <input type="submit" value="Atualizar">
+    </form>
+    <a href="{{ url_for('estantes') }}">Voltar para Estantes</a>
+</body>
+</html>

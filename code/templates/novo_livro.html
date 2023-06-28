@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Novo Livro</title>
+</head>
+<body>
+    <h1>Novo Livro</h1>
+    <form method="POST" action="{{ url_for('novo_livro', estante_id=estante_id) }}">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required><br>
+        <input type="submit" value="Criar">
+    </form>
+    <a href="{{ url_for('estante', estante_id=estante_id) }}">Voltar para Estante</a>
+</body>
+</html>

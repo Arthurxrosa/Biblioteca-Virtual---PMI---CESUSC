@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estantes</title>
+</head>
+<body>
+    <h1>Estantes</h1>
+    <p>Bem-vindo, {{ session['username'] }}!</p>
+    <ul>
+        {% for estante in estantes %}
+            <li><a href="{{ url_for('estante', estante_id=estante[0]) }}">{{ estante[2] }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('nova_estante') }}">Criar Nova Estante</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
