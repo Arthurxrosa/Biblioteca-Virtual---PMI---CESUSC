@@ -1,0 +1,24 @@
+<!-- templates/editar_livro.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Livro</title>
+</head>
+<body>
+    <h2>Editar Livro</h2>
+
+    <form method="POST" action="/editar_livro/{{ livro.id }}">
+        <label>Nome do Livro: <input type="text" name="nome" value="{{ livro.nome }}" required></label><br>
+        <label>Autor: <input type="text" name="autor" value="{{ livro.autor }}" required></label><br>
+        <label>Descrição: <textarea name="descricao" required>{{ livro.descricao }}</textarea></label><br>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <form action="/estante/{{ livro.estante_id }}" method="get">
+        <button type="submit">Cancelar</button>
+    </form>
+</body>
+</html>

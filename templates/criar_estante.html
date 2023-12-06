@@ -1,0 +1,22 @@
+<!-- templates/criar_estante.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Estante</title>
+</head>
+<body>
+    <h2>Criar Nova Estante</h2>
+
+    <form method="POST" action="/criar_estante">
+        <label>Nome da Estante: <input type="text" name="nome_estante" required></label><br>
+        <button type="submit">Criar Estante</button>
+    </form>
+
+    <form action="/biblioteca" method="get">
+        <button type="submit">Voltar para a Biblioteca</button>
+    </form>
+</body>
+</html>

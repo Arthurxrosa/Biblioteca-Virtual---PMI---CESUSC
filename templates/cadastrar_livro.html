@@ -1,0 +1,24 @@
+<!-- templates/cadastrar_livro.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livro</title>
+</head>
+<body>
+    <h2>Cadastrar Livro</h2>
+
+    <form method="POST" action="/cadastrar_livro/{{ estante_id }}">
+        <label>Nome do Livro: <input type="text" name="nome_livro" required></label><br>
+        <label>Autor: <input type="text" name="autor_livro" required></label><br>
+        <label>Descrição: <textarea name="descricao_livro" required></textarea></label><br>
+        <button type="submit">Cadastrar Livro</button>
+    </form>
+
+    <form action="/estante/{{ estante_id }}" method="get">
+        <button type="submit">Voltar para a Estante</button>
+    </form>
+</body>
+</html>

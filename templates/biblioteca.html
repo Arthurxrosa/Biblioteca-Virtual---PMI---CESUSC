@@ -1,0 +1,28 @@
+<!-- templates/biblioteca.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h2>Minha Biblioteca</h2>
+
+    {% if estantes %}
+        <ul>
+            {% for estante in estantes %}
+                <li><a href="/estante/{{ estante.id }}">{{ estante.nome }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você ainda não tem estantes.</p>
+    {% endif %}
+
+    <a href="/criar_estante">Crie uma estante</a>
+    <form action="/logout" method="get">
+        <button type="submit">Sair</button>
+    </form>
+</body>
+</html>
